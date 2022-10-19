@@ -3,23 +3,15 @@
 System.Console.Write("Введите целое число: ");
 
 int userAnswer = Int32.Parse(System.Console.ReadLine());
-int counter = 0;
+int counter = 2;
 
 string result = "";
 
 while (counter < userAnswer)
 {
-    counter++;
-    if (counter % 2 == 0)
-    {
-        result += $"{counter},";
-    }
-    else
-    {
-        continue;
-    }
-
-    
+    result += $"{counter}, ";
+    counter+=2;
 }
+
 
 System.Console.WriteLine(result);
