@@ -7,7 +7,7 @@ void OnStartup()
     int firstDigit = num / 100;
     int lastDigit = num % 10; 
 
-    System.Console.WriteLine($"{num} -> {firstDigit}{lastDigit}"); 
+    System.Console.WriteLine($"{num} -> {firstDigit * 10 + lastDigit}"); 
 }
 
 OnStartup();
