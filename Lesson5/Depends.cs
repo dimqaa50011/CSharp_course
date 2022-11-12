@@ -18,6 +18,17 @@ namespace Lesson5
             return arr;
         }
 
+        public static double[] CreateDoubleArry(int len = 10, int startPointBorder = 0, int endPointBorder = 100)
+        {
+            double[] arr = new double[len];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = Math.Round(new Random().Next(startPointBorder, endPointBorder) + new Random().NextDouble(), 2);
+            }
+
+            return arr;
+        }
+
         public static void PrintArray(int[] arr)
         {
             string msg = String.Empty;
@@ -29,5 +40,18 @@ namespace Lesson5
 
             System.Console.WriteLine(msg);
         }
+
+        public static void PrintArray(double[] arr)
+        {
+            string msg = String.Empty;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                msg += $"{arr[i]}, ";
+            }
+            msg += $"{arr[arr.Length - 1]}";
+
+            System.Console.WriteLine(msg);
+        }
+        
     }
 }
