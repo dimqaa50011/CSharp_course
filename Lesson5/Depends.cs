@@ -53,5 +53,10 @@ namespace Lesson5
             System.Console.WriteLine(msg);
         }
         
+        public static int InputArg(string msg)
+        {
+            System.Console.Write(msg + ": ");
+            return int.Parse(Console.ReadLine());
+        }
     }
 }
