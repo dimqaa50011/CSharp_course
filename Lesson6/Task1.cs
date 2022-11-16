@@ -29,11 +29,30 @@ namespace Lesson6
             while (true)
             {
                 System.Console.Write("Введите целое число: ");
-                bool parsed = int.TryParse(Console.ReadLine(), out int digit);
-                if (parsed) { if (digit > 0) countPositive++; }
+                bool parsed = TryParesDigit(Console.ReadLine(), out int digit);
+
+                if (parsed) 
+                {
+                    if (digit > 0) countPositive++;
+                }
                 else break;
             }
             return countPositive;
+        }
+        private static bool TryParesDigit(string answer, out int digit)
+        {
+            digit = -0;
+            if (answer == "q") return false;
+            try
+            {
+                digit = int.Parse(answer);
+                return true;
+            }
+            catch (FormatException ex)
+            {
+                System.Console.WriteLine($"Неверный формат данных. Вводите только вещественные числа. Вы ввели: {answer}");
+                return true;
+            }
         }
 
     }
