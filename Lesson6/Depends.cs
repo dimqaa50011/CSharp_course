@@ -17,5 +17,6 @@ namespace Lesson6
             System.Console.Write(msg + ": ");
             return double.Parse(Console.ReadLine());
         }
+        
     }
 }
