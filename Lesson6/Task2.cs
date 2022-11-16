@@ -21,7 +21,8 @@ namespace Lesson6
             double k2 = Depends.InputDoubleArg("Введите k2");
             double b2 = Depends.InputDoubleArg("Введите b2");
 
-            IntersectionLine(k1, b1, k2, b2);
+            double[] unionPoint = IntersectionLine(k1, b1, k2, b2);
+            System.Console.WriteLine($"Прямые пересекутся в точке A({unionPoint[0]};{unionPoint[1]})");
         }
         // k1 * x + b1 = k2 * x + b2
         // k1 * x - k2 * x = b2 - b1
