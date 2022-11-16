@@ -12,5 +12,10 @@ namespace Lesson6
             System.Console.Write(msg + ": ");
             return int.Parse(Console.ReadLine());
         }
+        public static double InputDoubleArg(string msg)
+        {
+            System.Console.Write(msg + ": ");
+            return double.Parse(Console.ReadLine());
+        }
     }
 }
