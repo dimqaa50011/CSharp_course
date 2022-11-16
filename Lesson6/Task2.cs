@@ -11,10 +11,11 @@ using System.Threading.Tasks;
 
 namespace Lesson6
 {
-    public class Task2
+    public class Task2 : Task
     {
-        public static void RunTask()
+        public override void RunTask()
         {
+            Depends.Requisition("Напишите программу, которая найдёт точку пересечения двух прямых,\nзаданных уравнениями y = k1 * x + b1, y = k2 * x + b2;\nзначения b1, k1, b2 и k2 задаются пользователем.");
             double k1 = Depends.InputDoubleArg("Введите k1");
             double b1 = Depends.InputDoubleArg("Введите b1");
             double k2 = Depends.InputDoubleArg("Введите k2");

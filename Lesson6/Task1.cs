@@ -11,10 +11,11 @@ using System.Threading.Tasks;
 
 namespace Lesson6
 {
-    public class Task1
+    public class Task1 : Task
     {
-        public static void RunTask()
+        public override void RunTask()
         {
+            Depends.Requisition("Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.");
             System.Console.WriteLine("Сейчас вам будет предложено ввести несколько чилел.\nЧтобы закончить вводить напишите букву 'q'.");
             System.Console.WriteLine("Чтобы продолжить нажмите Enter");
             System.Console.ReadKey();
@@ -22,7 +23,6 @@ namespace Lesson6
             int result = CountPositiveNumbers();
             System.Console.WriteLine($"Результат: {result} положительных числа");
         }
-
         private static int CountPositiveNumbers()
         {
             int countPositive = 0;

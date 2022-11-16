@@ -12,10 +12,11 @@ using System.Threading.Tasks;
 
 namespace Lesson6
 {
-    public class Task3
+    public class Task3 : Task
     {
-        public static void RunTask()
+        public override void RunTask()
         {
+            Depends.Requisition("(*) Найдите максимальное значение в матрице по каждой строке, получите сумму этих максимумов.\nЗатем найдите минимальное значение по каждой колонке,получите сумму этих минимумов.\nЗатем из первой суммы (с максимумами) вычтите вторую сумму(с минимумами)");
             int[,] matrix = CreateMatrix();
             FillMatrix(matrix);
             PrintMatrix(matrix);

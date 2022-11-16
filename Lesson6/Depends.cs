@@ -17,6 +17,11 @@ namespace Lesson6
             System.Console.Write(msg + ": ");
             return double.Parse(Console.ReadLine());
         }
-        
+        public static void Requisition(string msg)
+        {
+            System.Console.WriteLine("\nУсловие задачи:");
+            System.Console.WriteLine(msg);
+            System.Console.WriteLine();
+        }
     }
 }
