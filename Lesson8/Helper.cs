@@ -33,6 +33,13 @@ namespace Lesson8
                 }
                 System.Console.WriteLine();
             }
+            System.Console.WriteLine();
+        }
+        public static int[,] GetFillMatrix(int lines = 5, int columns = 5, int minBorder = 0, int maxBorder = 20)
+        {
+            int[,] matrix = CreateIntMatrix(lines, columns);
+            FillMatrix(matrix, maxBorder: maxBorder);
+            return matrix;
         }
     }
 }
