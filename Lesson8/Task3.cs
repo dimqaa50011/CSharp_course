@@ -22,9 +22,9 @@ namespace Lesson8
         private static int[,] MuliMatrix(int[,] matrixA, int[,] matrixB)
         {
             int[,] matrixC = Helper.CreateIntMatrix(matrixB.GetLength(0), matrixB.GetLength(1));
-            for (int i = 0; i < matrixB.GetLength(0); i++)
+            for (int i = 0; i < matrixC.GetLength(0); i++)
             {
-                for (int j = 0; j < matrixB.GetLength(1); j++)
+                for (int j = 0; j < matrixC.GetLength(1); j++)
                 {
                     int count = 0;
                     for (int k = 0; k < matrixA.GetLength(0); k++)
